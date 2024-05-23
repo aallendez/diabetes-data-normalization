@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Diagnostics</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <meta charset="UTF-8">
+    <style>
+        /* This targets the scrollbar track (the background) */
+        ::-webkit-scrollbar-track {
+            background-color: transparent; /* Makes the track background transparent */
+        }
+
+        /* This targets the scrollbar handle */
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.1); /* Dark handle for contrast */
+            border-radius: 4px; /* Optional: Rounds the corners of the scrollbar handle */
+        }
+
+        /* This targets the scrollbar itself (the whole scrollbar container) */
+        ::-webkit-scrollbar {
+            width: 8px; /* Adjusts the width of the vertical scrollbar */
+            height: 8px; /* Adjusts the height of the horizontal scrollbar */
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden animate-fade-in"></div>
+    <div>
+        <h1 class="text-blue-600 text-[75px] font-bold text-center my-24">Fill in your form!</h1>
+        <div class="my-20 flex w-full items-center justify-center">
+            <div class="mx-6">
+                <h3 class="my-4 text-center">Pregnancies:</h3>
+                <input id="pregnancies" type="text" class="border rounded-md p-2 border-gray-500" placeholder="Enter your pregnancies">
+            </div>
+            <div class="mx-6">
+                <h3 class="my-4 text-center">Glucose:</h3>
+                <input id="glucose" type="text" class="border rounded-md p-2 border-gray-500" placeholder="Enter your pregnancies">
+            </div>
+            <div class="mx-6">
+                <h3 class="my-4 text-center">Blood Pressure:</h3>
+                <input id="pressure" type="text" class="border rounded-md p-2 border-gray-500" placeholder="Enter your pregnancies">
+            </div>
+            <div class="mx-6">
+                <h3 class="my-4 text-center">Body Mass Index:</h3>
+                <input id="bodyMassIndex" type="text" class="border rounded-md p-2 border-gray-500" placeholder="Enter your pregnancies">
+            </div>
+            <div class="mx-6">
+                <h3 class="my-4 text-center">Diabetes Pedigree Function:</h3>
+                <input id="diabetesPedigree" type="text" class="border rounded-md p-2 border-gray-500" placeholder="Enter your pregnancies">
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <button type="button" onclick="sendInformation()" class="bg-blue-600 text-white text-center px-4 py-2 w-[100px] h-auto rounded-md hover:opacity-80 transition-all">Submit</button>
+        </div>
+
+        <script src="{{url_for('static',filename='script.js')}}"></script>
+    </div>
+</body>
+</html>
