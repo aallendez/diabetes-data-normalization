@@ -56,7 +56,7 @@ def print_confusion_matrix(model, test_x, test_y, predictors):
     print("AIC:", model.aic)
 
 def get_value(new_row):
-    df = pd.read_excel('/Users/juanalonso-allende/Desktop/Diabetes.xlsx')
+    df = pd.read_excel('Diabetes.xlsx')
 
     df.drop_duplicates(inplace=True)
     df.drop(["Age", "Insulin", "Skin thickness"], axis=1, inplace=True)
